@@ -1,3 +1,3 @@
 FROM nginx
 
-ADD nginx.conf /etc/nginx.conf
+ADD tweek.conf /etc/nginx/conf.d/tweek.conf
