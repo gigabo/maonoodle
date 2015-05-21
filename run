@@ -1,4 +1,7 @@
 #!/bin/sh
 
+docker stop `docker ps --no-trunc -q`
+docker rm   `docker ps --no-trunc -aq`
+
 docker run -d --name tweek -p 8080:80 tweek
 docker run -d --name nginx -p 80:80 --link tweek:tweek maonoodle-nginx
